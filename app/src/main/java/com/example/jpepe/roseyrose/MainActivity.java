@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.content.Intent;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -13,7 +14,11 @@ public class MainActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toast.makeText(this, "foobar - Rosey - again", Toast.LENGTH_LONG);
+        Toast.makeText(this, "The World is Rosey", Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(this, SecondActivity.class);
+        startActivity(intent);
+
     }
 
 
